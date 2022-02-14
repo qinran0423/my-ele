@@ -2,7 +2,7 @@
   <section
     class="el-container"
     :class="{ 'is-vertical': isVertical }"
-  ></section>
+  />
 </template>
 
 <script lang="ts">
