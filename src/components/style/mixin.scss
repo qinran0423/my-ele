@@ -1,6 +1,11 @@
 $namespace: 'el';
+$modifier-separator: '--';
 $state-prefix: 'is-';
+
+
 $--header-padding: 0 20px !default;
+$--footer-padding: 0 20px !default;
+$--main-padding: 20px !default;
 
 @mixin b($block) {
   $B: $namespace + '-'+ $block !global;
@@ -14,6 +19,21 @@ $--header-padding: 0 20px !default;
   @at-root {
     &.#{$state-prefix + $state} {
       @content;
+    }
+  }
+}
+
+@mixin m($modifier) {
+  $selector: &;
+  $currentSelector: '';
+
+  @each $unit in $modifier {
+    $currentSelector: #{$currentSelector + & + $modifier-separator + $unit + ','};
+  }
+
+  @at-root {
+    #{$currentSelector} {
+      @content
     }
   }
 }
