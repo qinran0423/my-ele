@@ -1,5 +1,7 @@
 <template>
-  <div class="el-form"><slot /></div>
+  <div class="el-form">
+    <slot />
+  </div>
 </template>
 
 <script lang="ts">

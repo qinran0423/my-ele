@@ -2,7 +2,12 @@
   <div class="el-form-item">
     <label v-if="label">{{ label }}</label>
     <slot />
-    <p v-if="error" class="error">{{ error }}</p>
+    <p
+      v-if="error"
+      class="error"
+    >
+      {{ error }}
+    </p>
   </div>
 </template>
 
