@@ -1,7 +1,11 @@
 <template>
   <div class="el-notification">
-    <div class="el-notification__title">{{ title }}</div>
-    <div class="el-notification__message">{{ message }}</div>
+    <div class="el-notification__title">
+      {{ title }}
+    </div>
+    <div class="el-notification__message">
+      {{ message }}
+    </div>
   </div>
 </template>
 
