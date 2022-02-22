@@ -7,7 +7,7 @@
       {{ message }}
     </div>
 
-    <div class="el-notifiaction__closeBtn" v-if="showClose">关闭</div>
+    <div v-if="showClose" class="el-notifiaction__closeBtn">关闭</div>
   </div>
 </template>
 
