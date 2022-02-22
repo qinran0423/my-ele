@@ -2,7 +2,7 @@ import Button from './Button.vue'
 import { mount } from '@vue/test-utils'
 describe('按钮测试', () => {
   it('显示文本', () => {
-    const content = '大圣小老弟'
+    const content = 'mick'
     const wrapper = mount(Button, {
       slots: {
         default: content

@@ -6,6 +6,8 @@
     <div class="el-notification__message">
       {{ message }}
     </div>
+
+    <div class="el-notifiaction__closeBtn" v-if="showClose">关闭</div>
   </div>
 </template>
 
@@ -19,14 +21,21 @@ export default {
 import { getCurrentInstance, defineProps } from "vue";
 const instance = getCurrentInstance();
 
+interface ShowClose {
+  type: string;
+  default: boolean;
+}
+
 interface Props {
   title?: string;
   message: string;
+  showClose: boolean;
 }
 
 withDefaults(defineProps<Props>(), {
   title: "",
   message: "",
+  showClose: true,
 });
 </script>
 
