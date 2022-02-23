@@ -31,7 +31,6 @@ describe('Notification', () => {
 
     expect(wrapper.get('.el-notification__message').text()).toContain(message)
   })
-
   it('showClose - 控制显示按钮', async () => {
     const wrapper = mount(Notification)
     expect(wrapper.find('.el-notifiaction__closeBtn').exists()).toBe(true)
